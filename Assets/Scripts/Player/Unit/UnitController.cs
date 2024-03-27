@@ -3,6 +3,7 @@ using Command.Main;
 using Command.Actions;
 using System.Collections;
 using System;
+using Command.Commands;
 using Object = UnityEngine.Object;
 
 namespace Command.Player
@@ -160,6 +161,8 @@ namespace Command.Player
             else
                 return unitView.transform.position - unitScriptableObject.EnemyBattlePositionOffset;
         }
+        
+        public void ProcessUnitCommand(UnitCommand commandToProcess) => GameService.Instance.CommandInvoker.ProcessCommand(commandToProcess);
     }
 
     public enum UnitUsedState
@@ -173,4 +176,6 @@ namespace Command.Player
         ALIVE,
         DEAD
     }
+    
+    
 }
