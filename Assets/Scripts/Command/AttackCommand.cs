@@ -3,11 +3,11 @@ using Command.Main;
 
 namespace Command.Commands
 {
-    public class ActionCommand : UnitCommand
+    public class AttackCommand : UnitCommand
     {
         private bool willHitTarget;
 
-        public ActionCommand(CommandData commandData)
+        public AttackCommand(CommandData commandData)
         {
             this.commandData = commandData;
             willHitTarget = WillHitTarget();
