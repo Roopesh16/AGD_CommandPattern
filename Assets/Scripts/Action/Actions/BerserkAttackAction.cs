@@ -26,7 +26,7 @@ namespace Command.Actions
         {
             GameService.Instance.SoundService.PlaySoundEffects(Sound.SoundType.BERSERK_ATTACK);
 
-            if (Random.Range(0f, 1f) < hitChance)
+            if (isSuccessful)
             {
                 targetUnit.TakeDamage(actorUnit.CurrentPower * 2);
             }
