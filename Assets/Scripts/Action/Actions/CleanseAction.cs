@@ -7,7 +7,6 @@ namespace Command.Actions
 {
     public class CleanseAction : IAction
     {
-        private const float hitChance = 0.2f;
         private UnitController actorUnit;
         private UnitController targetUnit;
         private bool isSuccessful;
@@ -26,7 +25,7 @@ namespace Command.Actions
         {
             GameService.Instance.SoundService.PlaySoundEffects(Sound.SoundType.CLEANSE);
 
-            if (Random.Range(0f, 1f) < hitChance)
+            if (isSuccessful)
                 targetUnit.ResetStats();
             else
                 GameService.Instance.UIService.ActionMissed();
