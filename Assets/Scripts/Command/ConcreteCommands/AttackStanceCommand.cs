@@ -18,11 +18,12 @@ namespace Command.Commands
         {
             if (willHitTarget)
             {
-                if(!targetUnit.IsAlive())
+                if (!targetUnit.IsAlive())
                     targetUnit.Revive();
-                
+
                 targetUnit.RestoreHealth(actorUnit.CurrentPower);
                 actorUnit.Owner.ResetCurrentActiveUnit();
+            }
         }
 
         public override bool WillHitTarget() => true;
