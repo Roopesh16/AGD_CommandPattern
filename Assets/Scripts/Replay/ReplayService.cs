@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Command.Commands;
 using Command.Main;
 using UnityEngine;
@@ -22,8 +23,15 @@ namespace Replay
         {
             if (replayCommandStack.Count > 0)
             {
+                Debug.Log("replay");
                 GameService.Instance.ProcessUnitCommand(replayCommandStack.Pop());
+                // WaitReplay();
             }
+        }
+
+        private async void WaitReplay()
+        {
+            await Task.Delay(1000);
         }
     }
 }
