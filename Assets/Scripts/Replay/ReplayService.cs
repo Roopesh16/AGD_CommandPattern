@@ -8,7 +8,8 @@ namespace Replay
 {
     public class ReplayService
     {
-        private Stack<ICommand> replayCommandStack = new();
+        private const int waitTime = 1000;
+        private Stack<ICommand> replayCommandStack;
         
         public ReplayState ReplayState { get; private set; }
 
@@ -23,15 +24,14 @@ namespace Replay
         {
             if (replayCommandStack.Count > 0)
             {
-                Debug.Log("replay");
-                GameService.Instance.ProcessUnitCommand(replayCommandStack.Pop());
-                // WaitReplay();
+                WaitReplay();
             }
         }
 
         private async void WaitReplay()
         {
-            await Task.Delay(1000);
+            await Task.Delay(waitTime);
+            GameService.Instance.ProcessUnitCommand(replayCommandStack.Pop());
         }
     }
 }
