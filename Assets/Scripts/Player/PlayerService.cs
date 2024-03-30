@@ -75,6 +75,7 @@ namespace Command.Player
                 winnerId = player1.PlayerID;
 
             GameService.Instance.UIService.ShowBattleEndUI(winnerId);
+            GameService.Instance.CommandInvoker.SetReplayCommandStack();
         }
 
         public void ProcessUnitCommand(UnitCommand commandToProcess)
