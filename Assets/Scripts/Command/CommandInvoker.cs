@@ -1,16 +1,12 @@
 using Command.Main;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Command.Commands
 {
     public class CommandInvoker
     {
-        private Stack<ICommand> commandRegistry = new Stack<ICommand>();
-
-        public CommandInvoker() => SubscribeToEvent();
-
-        public void SubscribeToEvent() =>
-            GameService.Instance.EventService.OnReplayButtonClicked.AddListener(SetReplayCommandStack);
+        private Stack<ICommand> commandRegistry = new();
 
         public void ProcessCommand(ICommand commandToProcess)
         {
@@ -32,7 +28,7 @@ namespace Command.Commands
 
         private bool CommandBelongsToActivePlayer() => (commandRegistry.Peek() as UnitCommand).commandData.ActorPlayerID == GameService.Instance.PlayerService.ActivePlayerID;
 
-        private void SetReplayCommandStack()
+        public void SetReplayCommandStack()
         {
             GameService.Instance.ReplayService.SetCommandStack(commandRegistry);
             commandRegistry.Clear();
