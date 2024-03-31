@@ -1948,7 +1948,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1260659848
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2234,6 +2234,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f9f1d2cf049ff604aab41d149ba596e9, type: 2}
   - {fileID: 11400000, guid: 32addf10f4370374993da88ffd77ac5c, type: 2}
   - {fileID: 11400000, guid: f6b3f84e1bf293a4d847b3c8ba69cb3f, type: 2}
+  - {fileID: 11400000, guid: 641b40954bf84b04aa75aad904451f0b, type: 2}
   sfxSource: {fileID: 363944623}
   bgMusicSource: {fileID: 927446004}
 --- !u!4 &1409757741
@@ -2614,7 +2615,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 71}
-  m_SizeDelta: {x: 400, y: 32}
+  m_SizeDelta: {x: 400, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1861826650
 MonoBehaviour:
