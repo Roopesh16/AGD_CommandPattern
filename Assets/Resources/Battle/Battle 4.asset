@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15700b09dee7b504c8b8f273851c4fcf, type: 3}
+  m_Name: Battle 4
+  m_EditorClassIdentifier: 
+  BattleID: 4
+  BattleBackgroundImage: {fileID: -717732176, guid: 53ddd195ebcffd74cba8e68bd465b5b3, type: 3}
+  Player1Data: {fileID: 11400000, guid: 996fcce034046194db9c6bd9601b7408, type: 2}
+  Player2Data: {fileID: 11400000, guid: d0205d5e036b8bc4fa73d5c5df43022b, type: 2}
